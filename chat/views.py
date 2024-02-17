@@ -12,6 +12,7 @@ def index(request: HttpRequest):
         if request.method == 'POST':
             req_body = json.loads(request.body)
             if (req_body['message'] != None):
+                print("hello")
                 model = genai.GenerativeModel('gemini-pro')
                 chat = model.start_chat(history=[
                     # {
