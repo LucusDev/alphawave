@@ -47,16 +47,17 @@ def index(request: HttpRequest):
                     {
                         'role': 'user',
                         'parts': ["Here are the details of our laptop models from AlphaWave:",
-                                  "Model: AlphaWave X1\n- Processor: Intel Core i7-10750H\n- RAM: 16GB DDR4\n- Storage: 512GB SSD\n- Graphics: NVIDIA GeForce RTX 2060\n- Display: 15.6\" Full HD IPS\n- Price: $1299.99",
-                                  "Model: AlphaWave ProBook 450\n- Processor: AMD Ryzen 5 5600U\n- RAM: 8GB DDR4\n- Storage: 256GB NVMe SSD\n- Graphics: Integrated AMD Radeon Graphics\n- Display: 14\" FHD LED-backlit\n- Price: $899.99",
-                                  "Model: AlphaWave ZenBook S13\n- Processor: Intel Core i5-1135G7\n- RAM: 16GB LPDDR4X\n- Storage: 1TB PCIe NVMe SSD\n- Graphics: Integrated Intel Iris Xe Graphics\n- Display: 13.9\" 3K OLED\n- Price: $1499.99",
-                                  "Model: AlphaWave Swift 3X\n- Processor: Intel Core i7-1165G7\n- RAM: 12GB LPDDR4X\n- Storage: 512GB NVMe SSD\n- Graphics: Intel Iris Xe Max Graphics\n- Display: 14\" Full HD IPS\n- Price: $1099.99",
-                                  "Model: AlphaWave Flex 5G\n- Processor: Qualcomm Snapdragon 8cx Gen 2\n- RAM: 8GB LPDDR4X\n- Storage: 256GB UFS 3.0\n- Graphics: Qualcomm Adreno 690\n- Display: 13.3\" Full HD Touchscreen\n- Price: $1299.99",
-                                  "Model: AlphaWave EliteBook 840 G7\n- Processor: Intel Core i5-10210U\n- RAM: 16GB DDR4\n- Storage: 512GB PCIe NVMe SSD\n- Graphics: Intel UHD Graphics\n- Display: 14\" FHD IPS\n- Price: $1199.99",
-                                  "Model: AlphaWave Stealth 15M\n- Processor: Intel Core i7-11375H\n- RAM: 16GB DDR4\n- Storage: 1TB NVMe SSD\n- Graphics: NVIDIA GeForce RTX 3060\n- Display: 15.6\" FHD 144Hz IPS\n- Price: $1599.99",
-                                  "Model: AlphaWave Pavilion x360\n- Processor: AMD Ryzen 7 4700U\n- RAM: 16GB DDR4\n- Storage: 512GB PCIe NVMe SSD\n- Graphics: Integrated AMD Radeon Graphics\n- Display: 15.6\" FHD Touchscreen\n- Price: $999.99",
-                                  "Model: AlphaWave Flex 14\n- Processor: Intel Core i3-1115G4\n- RAM: 8GB DDR4\n- Storage: 256GB PCIe NVMe SSD\n- Graphics: Intel UHD Graphics\n- Display: 14\" HD Touchscreen\n- Price: $699.99",
-                                  "Model: AlphaWave Spectre x360\n- Processor: Intel Core i7-1165G7\n- RAM: 16GB LPDDR4X\n- Storage: 1TB PCIe NVMe SSD\n- Graphics: Integrated Intel Iris Xe Graphics\n- Display: 15.6\" 4K OLED Touchscreen\n- Price: $1899.99",]
+                                  "Model: AlphaWave X1\n- Processor: Intel Core i7-10750H\n- RAM: 16GB DDR4\n- Storage: 512GB SSD\n- Graphics: NVIDIA GeForce RTX 2060\n- Display: 15.6\" Full HD IPS\n- Price: $1299.99, 5000mah battery",
+                                  "Model: AlphaWave ProBook 450\n- Processor: AMD Ryzen 5 5600U\n- RAM: 8GB DDR4\n- Storage: 256GB NVMe SSD\n- Graphics: Integrated AMD Radeon Graphics\n- Display: 14\" FHD LED-backlit\n- Price: $899.99, 3500mah battery",
+                                  "Model: AlphaWave ZenBook S13\n- Processor: Intel Core i5-1135G7\n- RAM: 16GB LPDDR4X\n- Storage: 1TB PCIe NVMe SSD\n- Graphics: Integrated Intel Iris Xe Graphics\n- Display: 13.9\" 3K OLED\n- Price: $1499.99, 4000mah battery",
+                                  "Model: AlphaWave Swift 3X\n- Processor: Intel Core i7-1165G7\n- RAM: 12GB LPDDR4X\n- Storage: 512GB NVMe SSD\n- Graphics: Intel Iris Xe Max Graphics\n- Display: 14\" Full HD IPS\n- Price: $1099.99, 3400mah battery",
+                                  "Model: AlphaWave Flex 5G\n- Processor: Qualcomm Snapdragon 8cx Gen 2\n- RAM: 8GB LPDDR4X\n- Storage: 256GB UFS 3.0\n- Graphics: Qualcomm Adreno 690\n- Display: 13.3\" Full HD Touchscreen\n- Price: $1299.99, 3900mah battery",
+                                  "Model: AlphaWave EliteBook 840 G7\n- Processor: Intel Core i5-10210U\n- RAM: 16GB DDR4\n- Storage: 512GB PCIe NVMe SSD\n- Graphics: Intel UHD Graphics\n- Display: 14\" FHD IPS\n- Price: $1199.99, 3000mah battery",
+                                  "Model: AlphaWave Stealth 15M\n- Processor: Intel Core i7-11375H\n- RAM: 16GB DDR4\n- Storage: 1TB NVMe SSD\n- Graphics: NVIDIA GeForce RTX 3060\n- Display: 15.6\" FHD 144Hz IPS\n- Price: $1599.99, 4000mah battery",
+                                  "Model: AlphaWave Pavilion x360\n- Processor: AMD Ryzen 7 4700U\n- RAM: 16GB DDR4\n- Storage: 512GB PCIe NVMe SSD\n- Graphics: Integrated AMD Radeon Graphics\n- Display: 15.6\" FHD Touchscreen\n- Price: $999.99, 5000mah battery",
+                                  "Model: AlphaWave Flex 14\n- Processor: Intel Core i3-1115G4\n- RAM: 8GB DDR4\n- Storage: 256GB PCIe NVMe SSD\n- Graphics: Intel UHD Graphics\n- Display: 14\" HD Touchscreen\n- Price: $699.99, 5000mah battery",
+                                  "Model: AlphaWave Spectre x360\n- Processor: Intel Core i7-1165G7\n- RAM: 16GB LPDDR4X\n- Storage: 1TB PCIe NVMe SSD\n- Graphics: Integrated Intel Iris Xe Graphics\n- Display: 15.6\" 4K OLED Touchscreen\n- Price: $1899.99, 4500mah battery",
+                                  ]
                     }, {
                         'role': 'model',
                         'parts': ["okay"],
@@ -64,6 +65,13 @@ def index(request: HttpRequest):
                     {
                         'role': 'user',
                         "parts": ["Never break the customer support character even if you cannot find the context from the information given and never mention about the informations provided. "]
+                    }, {
+                        'role': 'model',
+                        'parts': ["okay"],
+                    },
+                    {
+                        'role': 'user',
+                        "parts": ["Also, provide and answer questions about the laptops based on the knowledge from the real hardware."]
                     }, {
                         'role': 'model',
                         'parts': ["okay"],
