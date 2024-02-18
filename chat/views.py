@@ -81,7 +81,7 @@ def index(request: HttpRequest):
                                 Additional Features: Some models of the AlphaWave Active Pen may include additional features such as tilt support, allowing for shading and varying line thickness based on the angle of the stylus.
                                 Included Accessories: Depending on the package, the AlphaWave Active Pen may come with additional accessories such as replacement tips, a pen holder, or a carrying case for convenient storage and transportation.
                                 Overall, the AlphaWave Active Pen offers a versatile and intuitive stylus experience, enhancing the functionality and versatility of the AlphaWave Spectre x360 for creative professionals, students, and anyone who values precision and flexibility in their digital workflow."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
                         'parts': ["okay"],
@@ -94,7 +94,7 @@ def index(request: HttpRequest):
                                     Easter Weekend Deals: Celebrate Easter with AlphaWave and take advantage of exclusive deals and promotions on our top-selling laptops. Keep an eye out for limited-time offers and bundle deals during the Easter weekend, from April 15 to April 18, 2024.
                                     Referral Program: Refer a friend to AlphaWave and receive a discount on your next laptop purchase. Both you and your friend will save on your laptops. This program is ongoing with no specified end date.
                                     Free Accessories: Get free accessories, such as a laptop bag, mouse, or headset, with the purchase of select AlphaWave laptops. These offers vary depending on the model and time of purchase. Check our website for current eligible models and accessory offerings.
-                                    Seasonal Promotions: Keep an eye out for seasonal promotions throughout the year. AlphaWave runs special offers during holidays, such as Black Friday, Cyber Monday, and Christmas. To stay updated on the latest discounts and promotions, visit the AlphaWave website or follow us on social media. You can also sign up for our email newsletter to receive exclusive offers and updates."""]
+                                    """]
                     }, {
                         'role': 'model',
                         'parts': ["okay"],
@@ -112,7 +112,7 @@ def index(request: HttpRequest):
                                     The AlphaWave Pavilion x360 offers upgradable RAM options, supporting additional DDR4 memory modules for increased capacity. It can accommodate up to 16GB of RAM, providing users with flexibility for future upgrades.
                                     The AlphaWave Flex 14 features upgradable RAM, providing users with the flexibility to expand memory capacity as needed. It supports DDR4 memory modules and can be upgraded to a maximum of 16GB of RAM.
                                     The AlphaWave Spectre x360 offers upgradable RAM options, allowing users to enhance system performance by adding additional LPDDR4X memory modules. It can accommodate up to 16GB of RAM, providing ample memory for multitasking and productivity."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
                         'parts': ["okay"],
@@ -130,7 +130,7 @@ def index(request: HttpRequest):
                                     The AlphaWave Pavilion x360 is equipped with a reliable battery that provides up to 9 hours of battery life, making it suitable for all-day productivity and entertainment.
                                     The AlphaWave Flex 14 features a long-lasting battery that offers up to 10 hours of battery life on a single charge, providing users with the flexibility to work and play without interruptions.
                                     The AlphaWave Spectre x360 boasts an impressive battery life of up to 12 hours, ensuring users can stay productive and entertained throughout the day without needing to recharge frequently."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
                         'parts': ["okay"],
