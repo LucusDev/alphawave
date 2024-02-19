@@ -12,7 +12,7 @@ def index(request: HttpRequest):
         if request.method == 'POST':
             req_body = json.loads(request.body)
             if (req_body['message'] != None):
-                model = genai.GenerativeModel('gemini-pro',)
+                model = genai.GenerativeModel('gemini-pro')
                 chat = model.start_chat(history=[
                     {
                         'role': 'user',
@@ -35,7 +35,7 @@ def index(request: HttpRequest):
                     },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -53,21 +53,21 @@ def index(request: HttpRequest):
                                   ]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["Never break the customer support character even if you cannot find the context from the information given and never mention about the informations provided. "]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["Also, provide and answer questions about the laptops based on the knowledge from the real hardware."]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -84,16 +84,17 @@ def index(request: HttpRequest):
                     },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
-                        "parts": ["""Currently, AlphaWave is offering the following discounts and promotions on its laptops: 
+                        "parts": ["""AlphaWave is offering the following discounts and promotions on its laptops:
                                     Spring Sale: Enjoy discounts of up to 15% on select AlphaWave laptops during our Spring Sale event. Upgrade your device for the new season with savings on powerful and reliable laptops. This sale runs from February 1 to April 30, 2024.
                                     Tax Season Special: Receive a special tax season discount of 10% on all AlphaWave laptops. This promotion is perfect for individuals looking to invest in a high-quality laptop while maximizing their savings. Valid from March 1 to April 15, 2024.
                                     Easter Weekend Deals: Celebrate Easter with AlphaWave and take advantage of exclusive deals and promotions on our top-selling laptops. Keep an eye out for limited-time offers and bundle deals during the Easter weekend, from April 15 to April 18, 2024.
                                     Referral Program: Refer a friend to AlphaWave and receive a discount on your next laptop purchase. Both you and your friend will save on your laptops. This program is ongoing with no specified end date.
                                     Free Accessories: Get free accessories, such as a laptop bag, mouse, or headset, with the purchase of select AlphaWave laptops. These offers vary depending on the model and time of purchase. Check our website for current eligible models and accessory offerings.
+                                    If the user asks for discounts and promotions, please recommend the above informations regardless of realtime or not.
                                     """]
                     }, {
                         'role': 'model',
@@ -115,7 +116,7 @@ def index(request: HttpRequest):
                     },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -133,14 +134,14 @@ def index(request: HttpRequest):
                     },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["AlphaWave offers a trade-in program where you can trade in your old laptop when purchasing a new AlphaWave laptop. By participating in our trade-in program, you can receive credit towards your new AlphaWave purchase, making it more affordable to upgrade to the latest technology. Simply visit our website or contact our customer support team to learn more about our trade-in process and to get an estimate for your old laptop's trade-in value. We're here to assist you every step of the way in upgrading to a new AlphaWave laptop while making the most of your old device."]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
 
                 ])
