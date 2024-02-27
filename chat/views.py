@@ -12,7 +12,7 @@ def index(request: HttpRequest):
         if request.method == 'POST':
             req_body = json.loads(request.body)
             if (req_body['message'] != None):
-                model = genai.GenerativeModel('gemini-pro',)
+                model = genai.GenerativeModel('gemini-pro')
                 chat = model.start_chat(history=[
                     {
                         'role': 'user',
@@ -35,7 +35,7 @@ def index(request: HttpRequest):
                     },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -53,21 +53,21 @@ def index(request: HttpRequest):
                                   ]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["Never break the customer support character even if you cannot find the context from the information given and never mention about the informations provided. "]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["Also, provide and answer questions about the laptops based on the knowledge from the real hardware."]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -81,20 +81,21 @@ def index(request: HttpRequest):
                                 Additional Features: Some models of the AlphaWave Active Pen may include additional features such as tilt support, allowing for shading and varying line thickness based on the angle of the stylus.
                                 Included Accessories: Depending on the package, the AlphaWave Active Pen may come with additional accessories such as replacement tips, a pen holder, or a carrying case for convenient storage and transportation.
                                 Overall, the AlphaWave Active Pen offers a versatile and intuitive stylus experience, enhancing the functionality and versatility of the AlphaWave Spectre x360 for creative professionals, students, and anyone who values precision and flexibility in their digital workflow."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
-                        "parts": ["""Currently, AlphaWave is offering the following discounts and promotions on its laptops: 
+                        "parts": ["""AlphaWave is offering the following discounts and promotions on its laptops:
                                     Spring Sale: Enjoy discounts of up to 15% on select AlphaWave laptops during our Spring Sale event. Upgrade your device for the new season with savings on powerful and reliable laptops. This sale runs from February 1 to April 30, 2024.
                                     Tax Season Special: Receive a special tax season discount of 10% on all AlphaWave laptops. This promotion is perfect for individuals looking to invest in a high-quality laptop while maximizing their savings. Valid from March 1 to April 15, 2024.
                                     Easter Weekend Deals: Celebrate Easter with AlphaWave and take advantage of exclusive deals and promotions on our top-selling laptops. Keep an eye out for limited-time offers and bundle deals during the Easter weekend, from April 15 to April 18, 2024.
                                     Referral Program: Refer a friend to AlphaWave and receive a discount on your next laptop purchase. Both you and your friend will save on your laptops. This program is ongoing with no specified end date.
                                     Free Accessories: Get free accessories, such as a laptop bag, mouse, or headset, with the purchase of select AlphaWave laptops. These offers vary depending on the model and time of purchase. Check our website for current eligible models and accessory offerings.
-                                    Seasonal Promotions: Keep an eye out for seasonal promotions throughout the year. AlphaWave runs special offers during holidays, such as Black Friday, Cyber Monday, and Christmas. To stay updated on the latest discounts and promotions, visit the AlphaWave website or follow us on social media. You can also sign up for our email newsletter to receive exclusive offers and updates."""]
+                                    If the user asks for discounts and promotions, please recommend the above informations regardless of realtime or not.
+                                    """]
                     }, {
                         'role': 'model',
                         'parts': ["okay"],
@@ -112,10 +113,10 @@ def index(request: HttpRequest):
                                     The AlphaWave Pavilion x360 offers upgradable RAM options, supporting additional DDR4 memory modules for increased capacity. It can accommodate up to 16GB of RAM, providing users with flexibility for future upgrades.
                                     The AlphaWave Flex 14 features upgradable RAM, providing users with the flexibility to expand memory capacity as needed. It supports DDR4 memory modules and can be upgraded to a maximum of 16GB of RAM.
                                     The AlphaWave Spectre x360 offers upgradable RAM options, allowing users to enhance system performance by adding additional LPDDR4X memory modules. It can accommodate up to 16GB of RAM, providing ample memory for multitasking and productivity."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
@@ -130,17 +131,17 @@ def index(request: HttpRequest):
                                     The AlphaWave Pavilion x360 is equipped with a reliable battery that provides up to 9 hours of battery life, making it suitable for all-day productivity and entertainment.
                                     The AlphaWave Flex 14 features a long-lasting battery that offers up to 10 hours of battery life on a single charge, providing users with the flexibility to work and play without interruptions.
                                     The AlphaWave Spectre x360 boasts an impressive battery life of up to 12 hours, ensuring users can stay productive and entertained throughout the day without needing to recharge frequently."""]
-                    }, 
+                    },
                     {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
                     {
                         'role': 'user',
                         "parts": ["AlphaWave offers a trade-in program where you can trade in your old laptop when purchasing a new AlphaWave laptop. By participating in our trade-in program, you can receive credit towards your new AlphaWave purchase, making it more affordable to upgrade to the latest technology. Simply visit our website or contact our customer support team to learn more about our trade-in process and to get an estimate for your old laptop's trade-in value. We're here to assist you every step of the way in upgrading to a new AlphaWave laptop while making the most of your old device."]
                     }, {
                         'role': 'model',
-                        'parts': ["okay"],
+                        'parts': ["okay, I will remember that"],
                     },
 
                 ])
