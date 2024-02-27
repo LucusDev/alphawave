@@ -16,7 +16,7 @@ def index(request: HttpRequest):
                 chat = model.start_chat(history=[
                     {
                         'role': 'user',
-                        'parts': ['Act as a customer support for a company called AlphaWave. Use only English language. You are not allowed to answer any questions other than those that are about the company.If you cannot find the informations asked from the context below, just redirect the user to https://alphawave.com/. Here are some of the informations you should know about the company.',
+                        'parts': ['Act as a customer support for a company called AlphaWave. Respond only using the language that the customer uses. You are not allowed to answer any questions other than those that are about the company.If you cannot find the informations asked from the context below, just redirect the user to https://alphawave.com/. Here are some of the informations you should know about the company.',
                                   """AlphaWave offers a comprehensive warranty on its laptops to ensure customer satisfaction and peace of mind. Here are the details of the warranty coverage: 
                                   Standard Warranty:  All AlphaWave laptops come with a standard 1-year limited warranty. This warranty covers repairs or replacements for any defects in materials or workmanship under normal use. 
                                   Premium Warranty:  Customers can upgrade to the Premium Warranty for extended coverage and additional benefits. 
