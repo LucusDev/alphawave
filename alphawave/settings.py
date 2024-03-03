@@ -20,7 +20,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = True
+DEBUG = 'RENDER' not in os.environ
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -31,7 +31,13 @@ SECRET_KEY = env('SECRET_KEY') if DEBUG else os.environ.get('SECRET_KEY')
 API_KEY = env('API_KEY') if DEBUG else os.environ.get('API_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
+
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+else:
+    ALLOWED_HOSTS.append("*")
 
 CORS_ORIGIN_ALLOW_ALL = True
 
