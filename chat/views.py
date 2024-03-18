@@ -12,8 +12,11 @@ def index(request: HttpRequest):
         if request.method == 'POST':
             req_body = json.loads(request.body)
             if (req_body['message'] != None):
+                item: list[map] = [
+                ] if req_body['history'] == None else req_body['history']
+
                 model = genai.GenerativeModel('gemini-pro')
-                chat = model.start_chat(history=[
+                history = [
                     {
                         'role': 'user',
                         'parts': ['Act as a customer support for a company called AlphaWave. Respond only using the language that the customer uses. You are not allowed to answer any questions other than those that are about the company.If you cannot find the informations asked from the context below, just redirect the user to https://alphawave.com/. Here are some of the informations you should know about the company.',
@@ -143,8 +146,10 @@ def index(request: HttpRequest):
                         'role': 'model',
                         'parts': ["okay, I will remember that"],
                     },
-
-                ])
+                ]
+                history.extend(
+                    map(lambda x: {'role': x['role'], 'parts': x['text']}, item))
+                chat = model.start_chat(history=history)
                 response = chat.send_message(req_body['message'])
                 return JsonResponse({
                     "success": True,
