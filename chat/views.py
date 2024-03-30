@@ -10,7 +10,6 @@ genai.configure(api_key=settings.API_KEY)
 def recommendations(request: HttpRequest):
     try:
         if request.method == 'POST':
-
             model = genai.GenerativeModel('gemini-pro')
             history = [
                 {
@@ -149,7 +148,7 @@ def recommendations(request: HttpRequest):
                 'give me 4 recommendations questions based on the previous informations in the following format: [{"question":""},{"question":""}]')
             return JsonResponse({
                 "success": True,
-                "message": response.text,
+                "message": json.loads(response.text),
             })
         raise Exception
     except:
